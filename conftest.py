@@ -10,3 +10,5 @@ def setup(playwright):
     
     yield page
     
+    browser.close()
+    

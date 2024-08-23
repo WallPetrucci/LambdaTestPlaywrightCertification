@@ -1,72 +1,72 @@
 # LambdaTest Certification - Playwright (PYTHON)
 
-Esse projeto foi criado para atender o desafio da certificação do Lambdatest com Playwright
-Foi utilizado Python e Playwright executando a plataforma do LambdaTest e GitPod para executar o projeto.
+This project was created to meet the challenge of Lambdatest certification with Playwright
+Python and Playwright were used running the LambdaTest platform and GitPod to execute the project.
 
-**Pre-requisitos**
+**Prerequisites**
 - Python 3
-- Conta no LambdaTest
+- LambdaTest Account
 
-# Executar o projeto com Gitpod
-- Instale a extensao do Gitpod no browser
+# Run the project with Gitpod
+- Install the Gitpod browser extension
   https://www.gitpod.io/docs/configure/user-settings/browser-extension
 
-- Ao acessar o repositório, clique no botão "Open"
+- When accessing the repository, click the "Open" button
 ![Screenshot 2024-08-23 at 12 14 42](https://github.com/user-attachments/assets/9941ed99-54ed-451b-9f97-0ea3630a20ba)
 
 
-- Quando o workspace do GitPod conectar, execute o projeto no terminal
+- Once your GitPod workspace connects, run the project in the terminal
 ```bash
-# Execução em serial
+# Run tests serial mode
 pytest test_playwright.py
 
-# Execução com testes paralelos
+# run tests parallel mode
 pytest test_playwright.py -n 3
 ```
 
-# Instalação local
+# Local Installation
 ```bash
-# Clone o repositório
+# Clone repository
 git clone https://github.com/WallPetrucci/LambdaTestPlaywrightCertification
 
-# Entre no diretório do projeto
+# Enter the project directory
 cd LambdaTestPlaywrightCertification
 
-# Instale as dependências
+# Install dependencies
 pip install -r requirements.txt
 playwright install-deps
 playwright install
 ```
 
-# Variáveis de ambiente local
-Para executar o teste na plataforma da LambdaTest remotamente é necessário configurar as variáveis de ambiente
-que ficam no arquivo settings.py (LN11 / LN12) 
+# Local environment variables
+To run the test on the LambdaTest platform remotely, you need to configure the environment variables
+which are in the settings.py file (LN11 / LN12)
 
 ![image](https://github.com/user-attachments/assets/69976eec-8f76-436f-9047-f35e8cc1e441)
 
 -----
 
-- Dentro do LambdaTest na aba "Automation", clique em "Access Key"
+- Inside LambdaTest in the "Automation" tab, click on "Access Key"
   
 ![image](https://github.com/user-attachments/assets/a1347bec-9d24-47e1-a3c5-73030ddd91d5)
 
-- Configure na sua máquina as variáveis de ambiente com os valores do LambdaTest
+- Configure the environment variables on your machine with the LambdaTest values
 ```bash
 export LT_USERNAME <Username>
 export LT_ACCESS_KEY <Access Key>
 ```
 
-# Executando Local
+# Running Local
 ```bash
-# Execução em serial
+# Run tests serial mode
 pytest test_playwright.py
 
-# Execução com testes paralelos
+# Run tests parallel mode
 pytest test_playwright.py -n 3
 ```
 
-**Alguma dúvida? Entre em contato!**
+**Any questions? Contact us!**
 
 Wallace - Linkedin: https://www.linkedin.com/in/wallacepetrucci - wallacepetrucci@gmail.com
 
-Link do Projeto: https://github.com/WallPetrucci/LambdaTestPlaywrightCertification
+Project Link: https://github.com/WallPetrucci/LambdaTestPlaywrightCertification

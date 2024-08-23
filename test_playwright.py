@@ -1,11 +1,10 @@
 import pytest
-from playwright.sync_api import expect
+from playwright.sync_api import expect, sync_playwright
 from pages import page_playground, page_simple_form_demo, page_drag_drop_sliders, page_input_form_submit
-from time import sleep
 
-def test_scenario_1(setup):    
-    page = setup
-    
+def test_scenario_1(browser):    
+    page = browser.new_page()
+        
     # Page Objects instances
     playground_page = page_playground.PlaygroundPage(page)
     simple_form_demo_page = page_simple_form_demo.SimpleFormDemo(page)
@@ -22,9 +21,10 @@ def test_scenario_1(setup):
     simple_form_demo_page.enter_message(message)    
     simple_form_demo_page.click_check_value()
     expect(simple_form_demo_page.text_message).to_have_text(message)
-    
-def test_scenario_2(setup):    
-    page = setup
+
+
+def test_scenario_2(browser):    
+    page = browser.new_page()
     
     # Page Object Instance
     playground_page = page_playground.PlaygroundPage(page)
@@ -41,7 +41,7 @@ def test_scenario_2(setup):
     # Confirm validation slider on range success field
     expect(drag_drop_slider_page.range_success).to_have_text(percent_select)
 
-def test_scenario_3(setup):
+def test_scenario_3(browser):
     
     DATA_FORM_SUBMIT = {
         "Name": "Wallace Petrucci Neves",
@@ -57,13 +57,13 @@ def test_scenario_3(setup):
         "Zip code": "04321002"
     }
     
-    page = setup
+    page = browser.new_page()
     
     # Page Objects instances
     playground_page = page_playground.PlaygroundPage(page)
     input_form_submit_page = page_input_form_submit.InputFormSubmit(page)
     
-    #Open Browser, goto site and select menu
+    # Open Browser, goto site and select menu
     page.goto("/selenium-playground")        
     playground_page.select_playground_menu("Input Form Submit")
     
@@ -78,3 +78,4 @@ def test_scenario_3(setup):
     
     # Assert message
     expect(input_form_submit_page.success_message).to_have_text("Thanks for contacting us, we will get back to you shortly.")
+    

@@ -1,7 +1,7 @@
 # LambdaTest Certification - Playwright (PYTHON)
 
-This project was created to meet the challenge of Lambdatest certification with Playwright
-Python and Playwright were used running the LambdaTest platform and GitPod to execute the project.
+This project was created to meet the challenge of Lambdatest certification with Playwright,
+Python and running the LambdaTest platform with GitPod to execute the project.
 
 **Prerequisites**
 - Python 3

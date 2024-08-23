@@ -13,7 +13,8 @@ LT_ACCESS_KEY = os.getenv("LT_ACCESS_KEY")
 
 PLAYWRIGHT_VERSION = str(subprocess.getoutput('playwright --version')).strip().split(" ")[1]
 
-BROWSER_SETUP = ["Chrome", "Firefox"]
+BROWSER_SETUP = [{"browser": "Chrome", "platformName": "Windows 10"}, 
+                 {"browser": "MicrosoftEdge", "platformName": "macOS Sonoma"}]
 
 timestamp = int(time())
 

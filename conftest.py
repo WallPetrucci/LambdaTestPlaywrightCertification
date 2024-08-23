@@ -7,22 +7,23 @@ from settings import *
 
 
 # Função para criar a configuração de capabilities
-def get_capabilities(browser):
+def get_capabilities(browser, name_test):
     capabilities = CAPABILITY.copy()
-    capabilities['browserName'] = browser
-    #capabilities['LT:Options']['platform'] = browser_name["platformName"]
+    print(browser)
+    capabilities['browserName'] = browser["browser"]
+    capabilities["LT:Options"]["name"] = name_test
+    capabilities['LT:Options']['platform'] = browser["platformName"]
     capabilities['LT:Options']['playwrightClientVersion'] = PLAYWRIGHT_VERSION
         
     return capabilities
 
-@pytest.fixture(params=["Chrome"])
+@pytest.fixture(params=BROWSER_SETUP)
 def web_name(request):
     return request.param
     
 @pytest.fixture
 def browser(web_name, request):
-    capabilities = get_capabilities(web_name)
-    capabilities["LT:Options"]["name"] = request.node.name
+    capabilities = get_capabilities(web_name, request.node.name)
     capabilities_parser = urllib.parse.quote(json.dumps(capabilities))  
     
     with sync_playwright() as p:          

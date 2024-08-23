@@ -1,4 +1,5 @@
-LambdaTest Certification - Playwright (PYTHON)
+# LambdaTest Certification - Playwright (PYTHON)
+
 Esse projeto foi criado para atender o desafio da certificação do Lambdatest com Playwright
 Foi utilizado Python e Playwright executando a plataforma do LambdaTest e GitPod para executar o projeto.
 
@@ -39,13 +40,17 @@ playwright install
 
 # Variáveis de ambiente local
 Para executar o teste na plataforma da LambdaTest remotamente é necessário configurar as variáveis de ambiente
-que ficam no arquivo settings.py (LN11 / LN12)
+que ficam no arquivo settings.py (LN11 / LN12) 
+
 ![image](https://github.com/user-attachments/assets/69976eec-8f76-436f-9047-f35e8cc1e441)
 
-1 - Dentro do LambdaTest na aba "Automation", clique em "Access Key"
+-----
+
+- Dentro do LambdaTest na aba "Automation", clique em "Access Key"
+  
 ![image](https://github.com/user-attachments/assets/a1347bec-9d24-47e1-a3c5-73030ddd91d5)
 
-2 - Configure na sua máquina as variáveis de ambiente com os valores do LambdaTest
+- Configure na sua máquina as variáveis de ambiente com os valores do LambdaTest
 ```bash
 export LT_USERNAME <Username>
 export LT_ACCESS_KEY <Access Key>
@@ -60,9 +65,8 @@ pytest test_playwright.py
 pytest test_playwright.py -n 3
 ```
 
-**Alguma dúvida? Entre em contato!******
+**Alguma dúvida? Entre em contato!**
 
-**Contato**
 Wallace - Linkedin: https://www.linkedin.com/in/wallacepetrucci - wallacepetrucci@gmail.com
 
 Link do Projeto: https://github.com/WallPetrucci/LambdaTestPlaywrightCertification

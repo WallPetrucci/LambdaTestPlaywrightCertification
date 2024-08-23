@@ -1,6 +1,7 @@
 tasks:
   - name: Install Requirements
     init: pip install -r requirements.txt
-  - name: Install Playwright
+  - name: Install Playwright Dependences
     init: playwright install-deps
-    command: playwright install
+  - name: Playwright install
+    init: playwright install

@@ -4,8 +4,8 @@ This project was created to meet the challenge of Lambdatest certification with 
 Python and running the LambdaTest platform with GitPod to execute the project.
 
 **Prerequisites**
-- Python 3
-- LambdaTest Account
+- Python 3 & Pip
+- LambdaTest Account - https://www.lambdatest.com/
 
 # Run the project with Gitpod
 - Install the Gitpod browser extension
@@ -52,8 +52,8 @@ which are in the settings.py file (LN11 / LN12)
 
 - Configure the environment variables on your machine with the LambdaTest values
 ```bash
-export LT_USERNAME <Username>
-export LT_ACCESS_KEY <Access Key>
+export LT_USERNAME="<Username>"
+export LT_ACCESS_KEY="<Access Key>"
 ```
 
 # Running Local

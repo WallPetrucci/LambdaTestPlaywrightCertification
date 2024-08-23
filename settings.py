@@ -25,8 +25,8 @@ CAPABILITY = {
                         'platform': "Windows 10",
                         'build': f'New Build - {timestamp}',
                         'name': "Testing Settings",
-                        'user': os.getenv('LT_USERNAME'),
-                        'accessKey': os.getenv('LT_ACCESS_KEY'),
+                        'user': LT_USERNAME,
+                        'accessKey': LT_ACCESS_KEY,
                         'network': True,
                         'video': True,
                         'console': True

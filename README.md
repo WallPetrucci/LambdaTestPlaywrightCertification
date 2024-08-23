@@ -11,9 +11,17 @@ Foi utilizado Python e Playwright executando a plataforma do LambdaTest e GitPod
   https://www.gitpod.io/docs/configure/user-settings/browser-extension
 
 - Ao acessar o repositório, clique no botão "Open"
+![Screenshot 2024-08-23 at 12 14 42](https://github.com/user-attachments/assets/9941ed99-54ed-451b-9f97-0ea3630a20ba)
+
 
 - Quando o workspace do GitPod conectar, execute o projeto no terminal
+```bash
+# Execução em serial
 pytest test_playwright.py
+
+# Execução com testes paralelos
+pytest test_playwright.py -n 3
+```
 
 # Instalação local
 ```bash
